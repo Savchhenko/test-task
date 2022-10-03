@@ -1,5 +1,5 @@
-import cartIcon from "../images/cart-icon.svg";
-import likesIcon from "../images/likes-icon.svg";
+import cartIcon from "../assets/cart-icon.svg";
+import likesIcon from "../assets/likes-icon.svg";
 import "../index.css";
 
 const Header = () => {
