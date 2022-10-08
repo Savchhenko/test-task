@@ -9,11 +9,11 @@ const Header = () => {
         <div className="header__icons">
             <a href="#" className="icon">
                 <span className="icon-notification">2</span>
-                <img src={likesIcon} alt="likes icon" />
+                <img src={likesIcon} alt="Избранное иконка" />
             </a>
             <a href="#" className="icon">
                 <span className="icon-notification">1</span>
-                <img src={cartIcon} alt="cart icon"/>
+                <img src={cartIcon} alt="Корзина иконка"/>
             </a>
         </div>
     </header>
