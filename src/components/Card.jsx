@@ -1,8 +1,28 @@
+import starIcon from "../assets/star-icon.svg";
+import "../index.css";
+
 const Card = ({props}) => {
-    // console.log(props.img, props.title, props.price, props.rate, props.oldPrice);
 
     return (
-        <div>Card</div>
+        <div className="card">
+            <img src={props.img} className="card__img" alt="Apple headphones"/>
+            <div className="card__info">
+                <h4>{props.title}</h4>
+                <div className="card__info-price">
+                    <span className="price">{props.price} Р</span>
+                    {
+                        props.oldPrice ? <span className="old-price">{props.oldPrice} Р</span> : null
+                    }
+                </div>
+            </div>
+            <div className="card__info">
+                <div className="card__info-rate">
+                    <img src={starIcon}/>
+                    <span>{props.rate}</span>
+                </div>
+                <button className="card__btn">Купить</button>
+            </div>
+        </div>
     );
 };
 
