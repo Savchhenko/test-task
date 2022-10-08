@@ -20,7 +20,7 @@ const Card = ({props}) => {
                     <img src={starIcon}/>
                     <span>{props.rate}</span>
                 </div>
-                <button className="card__btn">Купить</button>
+                <button className="card__btn hover">Купить</button>
             </div>
         </div>
     );

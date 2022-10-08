@@ -17,14 +17,14 @@ const Footer = () => {
         <a href="#">Условия сервиса</a>
         <div id="lang">
           <img src={langIcon} alt="Иконка глобуса"/>
-          <span id="lang-active">Рус</span>
-          <span>Eng</span>
+          <span id="lang-active" className="hover">Рус</span>
+          <span className="hover">Eng</span>
         </div>
       </div>
       <div className="footer__social">
-        <a href="#" alt="VK"><img src={vkIcon} /></a>
-        <a href="#" alt="Telegram"><img src={telegramIcon} /></a>
-        <a href="#" alt="WhatsApp"><img src={whatsappIcon} /></a>
+        <a href="#" alt="VK" className="hover"><img src={vkIcon} /></a>
+        <a href="#" alt="Telegram" className="hover"><img src={telegramIcon} /></a>
+        <a href="#" alt="WhatsApp" className="hover"><img src={whatsappIcon} /></a>
       </div>
     </footer>
   );
