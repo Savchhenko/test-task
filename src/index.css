@@ -84,6 +84,7 @@ code {
 .card__img {
   display: block;
   margin: auto;
+  margin-top: 20px;
 }
 .card__info {
   width: 80%;
