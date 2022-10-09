@@ -25,15 +25,13 @@ const headphones = [
     }
 ];
 
-const Products2 = (props) => {
-    const { count } = props;
-
+const Products2 = () => {
     return (
         <section>
                 <h3 className="products-title">Беспроводные наушники</h3>
                 <div className="products">
                     {
-                        headphones.map(item => <Card item={item} count={count} key={item.index} />)
+                        headphones.map(item => <Card item={item} key={item.index} />)
                     }
                 </div>
             </section>

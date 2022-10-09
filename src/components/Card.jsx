@@ -1,10 +1,17 @@
 import starIcon from "../assets/star-icon.svg";
 import "../index.css";
+import { useContext } from "react";
+import Context from "../Context";
 
 const Card = (props) => {
-    const {item, count} = props;
+    const { item } = props;
+    const value = useContext(Context);
 
-    const handleClick = () => { count() };
+    // by click on Product's card change the number on CartIcon on Header component
+    const handleClick = () => { 
+        value.count();
+    }; 
+
 
     return (
         <div className="card">
