@@ -47,17 +47,19 @@ const headphones = [
     },
 ];
 
-const Products1 = () => {
+const Products1 = (props) => {
+    const { count } = props;
+
     return (
         <section>
             <h3 className="products-title">Наушники</h3>
             <div className="products">
                 {
-                    headphones.map(item => <Card props={item} key={item.index} />)
+                    headphones.map(item => <Card item={item} count={count} key={item.index} />)
                 }
             </div>
         </section>
-     );
+    );
 };
 
 export default Products1;

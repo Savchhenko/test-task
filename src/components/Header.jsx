@@ -2,7 +2,9 @@ import cartIcon from "../assets/cart-icon.svg";
 import likesIcon from "../assets/likes-icon.svg";
 import "../index.css";
 
-const Header = () => {
+const Header = (props) => {
+  const { counter } = props;
+
   return (
     <header className="header">
         <div className="logo">QPICK</div>
@@ -12,7 +14,7 @@ const Header = () => {
                 <img src={likesIcon} alt="Избранное иконка" />
             </a>
             <a href="#" className="icon">
-                <span className="icon-notification">1</span>
+                <span className="icon-notification">{counter}</span>
                 <img src={cartIcon} alt="Корзина иконка"/>
             </a>
         </div>

@@ -1,17 +1,20 @@
 import starIcon from "../assets/star-icon.svg";
 import "../index.css";
 
-const Card = ({props}) => {
+const Card = (props) => {
+    const {item, count} = props;
+
+    const handleClick = () => { count() };
 
     return (
         <div className="card">
-            <img src={props.img} className="card__img" alt="Наушники"/>
+            <img src={item.img} className="card__img" alt="Наушники"/>
             <div className="card__info">
-                <h4>{props.title}</h4>
+                <h4>{item.title}</h4>
                 <div className="card__info-price">
-                    <span className="price">{props.price} Р</span>
+                    <span className="price">{item.price} Р</span>
                     {
-                        props.oldPrice ? <span className="old-price">{props.oldPrice} Р</span> : null
+                        item.oldPrice ? <span className="old-price">{item.oldPrice} Р</span> : null
                     }
                 </div>
             </div>
@@ -20,7 +23,7 @@ const Card = ({props}) => {
                     <img src={starIcon}/>
                     <span>{props.rate}</span>
                 </div>
-                <button className="card__btn hover">Купить</button>
+                <button className="card__btn hover" onClick={handleClick}>Купить</button>
             </div>
         </div>
     );
