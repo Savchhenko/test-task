@@ -28,7 +28,7 @@ const Card = (props) => {
             <div className="card__info">
                 <div className="card__info-rate">
                     <img src={starIcon}/>
-                    <span>{props.rate}</span>
+                    <span>{item.rate}</span>
                 </div>
                 <button className="card__btn hover" onClick={handleClick}>Купить</button>
             </div>
