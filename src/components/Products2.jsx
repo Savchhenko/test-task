@@ -28,7 +28,7 @@ const headphones = [
 const Products2 = () => {
     return (
         <section className="padding-bottom">
-            <h3 className="products-title">Беспроводные наушники</h3>
+            <h3 className="section-title">Беспроводные наушники</h3>
             <div className="products">
                 {
                     headphones.map(item => <Card item={item} key={item.index} />)

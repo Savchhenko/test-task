@@ -50,7 +50,7 @@ const headphones = [
 const Products1 = () => {
     return (
         <section>
-            <h3 className="products-title">Наушники</h3>
+            <h3 className="section-title">Наушники</h3>
             <div className="products">
                 {
                     headphones.map(item => <Card item={item} key={item.index} />)
