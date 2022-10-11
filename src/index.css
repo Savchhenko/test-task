@@ -15,7 +15,8 @@ code {
 .App {
   margin: 0 auto;
   width: 80%;
-  align-items: center;
+  min-height: 100vh;
+  position: relative;
 }
 * {
   box-sizing: border-box;
@@ -74,6 +75,10 @@ code {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.padding-bottom {
+  /* TODO: fix bug with footer */
+  padding-bottom: 150px; 
+}
 
 /* Card */
 .card {
@@ -98,7 +103,7 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
@@ -146,13 +151,16 @@ code {
 
 /* Footer */
 .footer {
+	position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 30px 30px 0px 0px;
   padding: 4% 2% 2%;
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
 }
 .footer__nav-links {
   display: flex;
