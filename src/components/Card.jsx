@@ -10,6 +10,25 @@ const Card = (props) => {
     // by click on Product's card change the number on CartIcon on Header component
     const handleClick = () => { 
         value.count();
+
+        let arr = [];
+        const index = Date.now();
+        let data = sessionStorage.getItem("products"); // data = null if sessionStarage doesn't have data
+        
+        if (data !== false && data !== null) { // проверяет, что в ЛС уже есть объект с данными
+            arr.push(data);
+        }
+        
+        const productData = {
+            key: index, 
+            img: item.img,
+            title: item.title,
+            price: item.price
+        };
+
+        arr.push(JSON.stringify(productData));
+
+        sessionStorage.setItem("products", arr);
     }; 
 
 
