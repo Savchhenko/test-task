@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import Context from "../Context";
 import cartIcon from "../assets/cart-icon.svg";
 import likesIcon from "../assets/likes-icon.svg";
@@ -9,16 +10,16 @@ const Header = () => {
 
     return (
         <header className="header">
-            <div className="logo">QPICK</div>
+            <div className="logo"><Link to="/">QPICK</Link></div>
             <div className="header__icons">
                 <a href="#" className="icon">
                     <span className="icon-notification">2</span>
                     <img src={likesIcon} alt="Избранное иконка" />
                 </a>
-                <a href="#" className="icon">
+                <Link to="/cart" className="icon">
                     <span className="icon-notification">{value.productsCounter}</span>
                     <img src={cartIcon} alt="Корзина иконка"/>
-                </a>
+                </Link>
             </div>
         </header>
     );
