@@ -6,9 +6,11 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
 import Context from "./Context";
+import parseDataFromSessionStorage from "./parseDataFromSessionStorage";
 
 function App() {
-    const [productsCounter, setProductsCounter] = useState(0); //the number on CartIcon in Header component
+    const productsCounterNumber = parseDataFromSessionStorage().length; // number of objects that SessionStorage stores
+    const [productsCounter, setProductsCounter] = useState(productsCounterNumber); //the number on CartIcon in Header component
     const count = () => setProductsCounter(productsCounter + 1);
 
     // global object that contains variable and function count() which changes this variable
