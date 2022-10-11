@@ -22,9 +22,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer__social">
-                <a href="#" alt="VK" className="hover"><img src={vkIcon} /></a>
-                <a href="#" alt="Telegram" className="hover"><img src={telegramIcon} /></a>
-                <a href="#" alt="WhatsApp" className="hover"><img src={whatsappIcon} /></a>
+                <a href="#" alt="VK" className="hover"><img src={vkIcon} alt="Вконтакте"/></a>
+                <a href="#" alt="Telegram" className="hover"><img src={telegramIcon} alt="Телеграм"/></a>
+                <a href="#" alt="WhatsApp" className="hover"><img src={whatsappIcon} alt="WhatsApp"/></a>
             </div>
         </footer>
     );
