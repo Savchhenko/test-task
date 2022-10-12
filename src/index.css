@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   background-color: #EAEAEA;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -16,10 +17,7 @@ code {
   margin: 0 auto;
   width: 80%;
   min-height: 100vh;
-  position: relative;
-}
-* {
-  box-sizing: border-box;
+  position: relative; /* it's for Footer (to fix it on the bottom)*/
 }
 
 .hover:hover {
@@ -74,14 +72,13 @@ code {
   color: #838383;
 }
 
-/* Products */
+/* Products section*/
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .padding-bottom {
-  /* TODO: fix bug with footer */
   padding-bottom: 150px; 
 }
 
@@ -152,7 +149,6 @@ code {
   font-size: 17px;
   cursor: pointer;
 }
-/* TODO: media queries for Card  */
 
 /* Footer */
 .footer {
@@ -184,7 +180,7 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* TODO:  justify-content: space-between to work*/
+  /* TODO:  justify-content: space-between make to work*/
 }
 .footer__links #lang {
   display: flex;
@@ -262,7 +258,7 @@ code {
   color: #fff;
   cursor: pointer;
 } 
-.circle{
+.circle {
   width: 20px;
   height: 20px;
   border-radius: 100%;
@@ -367,4 +363,184 @@ code {
   font-size: 17px;
   line-height: 21px;
   cursor: pointer;
+}
+
+/* media queries */
+@media (max-width: 1020px) {
+  .card {
+    justify-content: flex-start;
+  }
+  .card__info {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .card__info:last-child {
+    margin-top: 30px;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .card__info-price {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 1019px) {
+  .card__img {
+    width: 76%;
+    height: 70%;
+    margin-bottom: 15px;
+  }
+  .cart__product {
+    padding: 5%;
+  }
+  .cart__product-info {
+    flex-basis: 40%;
+  }
+  .cart__product-entirecost {
+    flex-basis: 20%;
+  }
+  .cart__forpayment {
+    width: 50%;
+  }
+  .cart__forpayment__btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 759px) {
+  .card {
+    width: 98%;
+  }
+  .card__img {
+    margin-bottom: 20px;
+  }
+  .footer {
+    padding: 5% 5% 2%;
+    width: 90%;
+  }
+  .footer a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .footer__links #lang span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 15px;
+    margin-left: 10px;
+  }
+  .footer__social {
+    flex-direction: column;
+  }
+  .footer__social a {
+    margin: 3px;
+  }
+  .footer__social img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .counter {
+    margin-top: 10px;
+  }
+  .counter-btn {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 0;
+  }
+  .circle {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 759px) {
+  .cart {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .cart__items {
+    width: 100%;
+    align-items: center;
+  }
+  .cart__forpayment {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .cart__forpayment__btn {
+    height: 50%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+}
+  .cart__product {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 5%;
+  }
+  .cart__product-info {
+    flex-basis: 40%;
+    height: 100%;
+    align-self: center;
+  }
+  .cart__product-entirecost {
+    flex-basis: 20%;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer__nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .App {
+    width: 100%;
+    padding-left: 3%;
+  }
+  .card {
+    width: 96%;
+    margin-left: 3%;
+  }
+  .card__img {
+    margin-bottom: 20px;
+    width: 60%;
+    height: 62%;
+  }
+  .footer {
+    width: 88%;
+    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__links #lang {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer__links #lang span {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .footer__social a {
+    margin: 5px 10px;
+  }
+  .footer__social img {
+    width: 20px;
+    height: 20px;
+  }
 }
